@@ -9,6 +9,6 @@ resource "aws_instance" "terraform-demo-1" {
   tags = {
     Name = "terraform-demo-1"
     turbo_owner = "Ray.Mileo@ibm.com"
-    Terraform_Config = "https://github.com/turbonomic-integrations/terraform-demo.git:variable"
+    Terraform_Config = "https://github.com/turbonomic-integrations/terraform-demo/blob/main/terraform.tfvars::instance_type-1"
   }
 }
