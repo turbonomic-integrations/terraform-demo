@@ -16,6 +16,9 @@ resource "aws_instance" "terraform-demo-2" {
   ami                = var.ami-2
   instance_type      = var.instance_type-2
   key_name           = "ray-demo"
+
+  user_data          = "${file("user-data-script.sh")}"
+  
   tags               = {
     Name             = "terraform-demo-2"
     turbo_owner      = "Ray.Mileo@ibm.com"
